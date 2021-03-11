@@ -1,4 +1,27 @@
 import "package:flutter/material.dart";
+import 'package:frontloops_06/constants.dart';
+
+const BoxDecoration footerBoxDecoration = BoxDecoration(
+  color: Colors.white,
+  boxShadow: [
+    BoxShadow(
+      offset: Offset(0, -3),
+      blurRadius: 5.0,
+      spreadRadius: 3.0,
+      color: Colors.black12,
+    ),
+  ],
+);
+
+const TextStyle dateTextStyle = TextStyle(
+  fontSize: 24.0,
+  fontWeight: FontWeight.w100,
+);
+
+const TextStyle numberOfCommentsTextStyle = TextStyle(
+  fontSize: 24.0,
+  color: Color.fromRGBO(160, 160, 160, 1),
+);
 
 class ArticleFooter extends StatelessWidget {
   @override
@@ -12,15 +35,11 @@ class ArticleFooter extends StatelessWidget {
               children: [
                 TextSpan(
                   text: "Sat 06 Aug 2017 - ",
-                  style: TextStyle(
-                    fontSize: 24.0,
-                    fontWeight: FontWeight.w100,
-                  ),
+                  style: dateTextStyle,
                 ),
                 TextSpan(
                   text: "22:14",
-                  style: TextStyle(
-                    fontSize: 24.0,
+                  style: dateTextStyle.copyWith(
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -38,10 +57,7 @@ class ArticleFooter extends StatelessWidget {
               ),
               Text(
                 "23",
-                style: TextStyle(
-                  fontSize: 24.0,
-                  color: Color.fromRGBO(160, 160, 160, 1),
-                ),
+                style: numberOfCommentsTextStyle,
               ),
               SizedBox(
                 width: 30.0,
@@ -54,18 +70,8 @@ class ArticleFooter extends StatelessWidget {
           ),
         ],
       ),
-      padding: EdgeInsets.all(50.0),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        boxShadow: [
-          BoxShadow(
-            offset: Offset(0, -3),
-            blurRadius: 5.0,
-            spreadRadius: 3.0,
-            color: Colors.black12,
-          ),
-        ],
-      ),
+      padding: EdgeInsets.all(kUniversalPadding),
+      decoration: footerBoxDecoration,
     );
   }
 }

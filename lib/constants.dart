@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 
 const double kContainerWidth = 1200.0;
+const double kUniversalPadding = 50.0;
 
 const Color kBackgroundColor = Color.fromRGBO(240, 199, 140, 1);
 

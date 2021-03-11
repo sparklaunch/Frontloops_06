@@ -1,5 +1,16 @@
 import "package:flutter/material.dart";
 
+import "package:frontloops_06/components/DecorationBar.dart";
+
+const TextStyle titleTextStyle = TextStyle(
+  fontSize: 40.0,
+  fontWeight: FontWeight.bold,
+);
+const TextStyle subTitleTextStyle = TextStyle(
+  fontSize: 40.0,
+  fontWeight: FontWeight.w100,
+);
+
 class ArticleTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -8,26 +19,13 @@ class ArticleTitle extends StatelessWidget {
       children: [
         Text(
           "Be a man:",
-          style: TextStyle(
-            fontSize: 40.0,
-            fontWeight: FontWeight.bold,
-          ),
+          style: titleTextStyle,
         ),
         Text(
           "Respect Women",
-          style: TextStyle(
-            fontSize: 40.0,
-            fontWeight: FontWeight.w100,
-          ),
+          style: subTitleTextStyle,
         ),
-        Container(
-          color: Color.fromRGBO(223, 112, 87, 1),
-          height: 5.0,
-          width: 50.0,
-          margin: EdgeInsets.only(
-            top: 15.0,
-          ),
-        ),
+        DecorationBar(),
       ],
     );
   }

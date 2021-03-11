@@ -1,9 +1,12 @@
 import "package:flutter/material.dart";
+import 'package:frontloops_06/constants.dart';
 
 const String contentText =
     "The desire to be respected by someone of the opposite sex is something that runs deep within everyone, even though most people don't take time to find someone who truly respects them. It seems like people are just looking for someone to show them the slightest amount of attention, settling for something much less than respect. I am convinced one of the best ways to help any relationship grow is by showing respect.";
 const String contentText2 =
     "I have come to the conclusion that everyone longs to be respected. What is respect? Respect is showing someone extra special attention, or high regard, based on a desire to show them how highly they are valued.";
+
+const double gapBetweenTexts = 20.0;
 
 const TextStyle contentTextStyle = TextStyle(
   fontSize: 30.0,
@@ -15,7 +18,7 @@ class ArticleContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(50.0),
+      padding: EdgeInsets.all(kUniversalPadding),
       child: Column(
         children: [
           RichText(
@@ -35,7 +38,9 @@ class ArticleContent extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 20.0),
+          SizedBox(
+            height: gapBetweenTexts,
+          ),
           Text(
             contentText2,
             style: contentTextStyle,
